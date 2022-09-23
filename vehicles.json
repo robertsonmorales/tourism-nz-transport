@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Motorcycle",
+        "minimum_capacity": 1,
+        "maximum_capacity": 1,
+        "price_per_day": 109,
+        "minimum": 1,
+        "maximum": 5,
+        "fuel_consumption": 3.7,
+        "fuel_consumption_distance": 100,
+        "image": "images/vehicles/motorcycle.png"
+    },
+    {
+        "name": "Small Car",
+        "minimum_capacity": 1,
+        "maximum_capacity": 2,
+        "price_per_day": 129,
+        "minimum": 1,
+        "maximum": 10,
+        "fuel_consumption": 8.5,
+        "fuel_consumption_distance": 100,
+        "image": "images/vehicles/small car.png"
+    },
+    {
+        "name": "Large Car",
+        "minimum_capacity": 1,
+        "maximum_capacity": 5,
+        "price_per_day": 144,
+        "minimum": 3,
+        "maximum": 10,
+        "fuel_consumption": 9.7,
+        "fuel_consumption_distance": 100,
+        "image": "images/vehicles/large car.png"
+    },
+    {
+        "name": "Motorhome",
+        "minimum_capacity": 2,
+        "maximum_capacity": 6,
+        "price_per_day": 200,
+        "minimum": 2,
+        "maximum": 15,
+        "fuel_consumption": 17,
+        "fuel_consumption_distance": 100,
+        "image": "images/vehicles/Motorhome.png"
+    }
+]

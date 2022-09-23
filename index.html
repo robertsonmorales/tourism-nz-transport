@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Zealand</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- ENDS HERE -->
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <div class="top-nav">
+                <div class="logo-brand">
+                    <img src="images/logo.png" 
+                        alt="logo" 
+                        class="logo">
+                </div>
+                <div class="dropdown-and-search">
+                    <select name="lang" id="lang">
+                        <option value="nz">New Zealand</option>
+                    </select>
+    
+                    <div class="search-group">
+                        <img src="images/Icon.svg" 
+                            alt="Search"
+                            width="18" 
+                            height="18">
+                        <input type="text" name="search" value="Search">
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-nav">
+                <ul>
+                    <li>Destinations</li>
+                    <li>Things to do</li>
+                    <li>Itineraries</li>
+                    <li>Transport</li>
+                    <li>Accommodation</li>
+                    <li>About New Zealand</li>
+                    <li>Travel Deals</li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <section class="form-wrapper">
+                <div class="content">
+                    <div class="title-and-description">
+                        <h1>Explore New Zealand at your own pace</h1>
+                        <h3>Find out the best transport option for your travel</h3>
+                    </div>
+        
+                    <form action="#" method="POST" class="search-form" id="search-form">
+        
+                        <div class="input-wrapper">
+                            <div class="input-group">
+                                <label for="from">From</label>
+                                <select name="from" id="from" class="from">
+                                    <option value="">Pick-up Location</option>
+                                </select>
+                                <span class="invalid-feedback" id="from-is-invalid"></span>
+                            </div>
+            
+                            <div class="input-group">
+                                <label for="to">To</label>
+                                <select name="to" id="to">
+                                    <option value="">Drop-off Location</option>
+                                </select>
+                                <span class="invalid-feedback" id="to-is-invalid"></span>
+                            </div>
+            
+                            <div class="input-group">
+                                <label for="not">Number of travellers</label>
+                                <select name="not" id="not">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+            
+                            <div class="input-group">
+                                <label for="nod">Number of days</label>
+                                <select name="nod" id="nod">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-search">SEARCH</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="vehicle-results">
+                <div class="title-and-description">
+                    <h3>Showing All Vehicle Results</h3>
+                    <p>The result listed represent the best transport options based on the information provided</p>
+                </div>
+
+                <div class="vehicles"></div>
+                <div class="empty-state">
+
+                    <img src="images/undraw_no_data_re_kwbl.svg" alt=""
+                        width="200">
+                    <h1>Sorry!</h1>
+                    <p>No record found.</p>
+                    
+                </div>
+            </section>
+        </main>
+
+        <footer></footer>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Calculation</h3>
+            </div>
+            <div class="modal-body">
+                <p>Total price: <span id="total-price"></span></p>
+                <p>Fuel consumption: <span id="fuel-consumption"></span></p>
+                <input type="hidden" id="distance-in-km">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIUCK8DTLo_b5Vxlf50VaihQkSOejT9eU&libraries=places"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/google-map.js"></script>
+</body>
+</html>

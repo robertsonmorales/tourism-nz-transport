@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Auckland City",
+        "latLng": "-36.85021897791184, 174.7633996482992"
+    },
+    {
+        "name": "Auckland Airport",
+        "latLng": "-37.007704970463536, 174.78702116361055"
+    },
+    {
+        "name": "Wellington Airport",
+        "latLng": "-41.327368489085416, 174.808209941493"
+    },
+    {
+        "name": "Christchurch Airport",
+        "latLng": "-43.487412026262795, 172.5379068532056"
+    },
+    {
+        "name": "Queenstown Airport",
+        "latLng": "-45.019673858894066, 168.7459952823083"
+    },
+    {
+        "name": "Dunedin Airport",
+        "latLng": "-45.92580267740477, 170.2026567860951"
+    }
+]
